@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Primary Meta Tags -->
+    <title>DreamPixel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="DreamPixel">
+    <meta name="author" content="Nisar Ahmad">
+    <!--  Social tags -->
+    <meta name="keywords"
+        content="Salesforce chorme Extension, Salesforce, LWC, Apex, LWC Editor, Salesforce LWC Editor, Salesforce Assistant, Salesforce Lightning Grid System, Salesforce LWC Short Keys">
+    <meta name="description"
+        content="Salesforce chorme Extension, Salesforce, LWC, Apex, LWC Editor, Salesforce LWC Editor, Salesforce Assistant, Salesforce Lightning Grid System, Salesforce LWC Short Keys">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/cloud-computing.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/cloud-computing.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome -->
+    <link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Pixel CSS -->
+    <link type="text/css" href="./css/neumorphism.css" rel="stylesheet">
+
+    <style>
+        .full-bold {
+            font-weight: 900 !important;
+        }
+
+        .horizontal-line:before,
+        .horizontal-line:after {
+            background-color: #b5b5ba;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 15%;
+        }
+
+        .horizontal-line:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+        .horizontal-line:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+
+        .section {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header-global">
+        <nav id="navbar-main" aria-label="Primary navigation"
+            class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
+            <div class="container position-relative">
+                <a class="navbar-brand shadow-soft py-1 px-3 rounded border border-light mr-lg-4" href="./index.html"
+                    style="text-transform: capitalize;font-size: 1.3rem;">
+                    <!-- <img class="navbar-brand-dark" src="./assets/images/logo.svg" alt="Logo light">
+                <img class="navbar-brand-light" src="./assets/images/logo.svg" alt="Logo dark"> -->
+                    <span>Dream</span><span style="font-weight: 100;">Pixel</span>
+                </a>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="./index.html"
+                                    class="navbar-brand shadow-soft py-1 px-3 rounded border border-light"
+                                    style="text-transform: capitalize;font-size: 1.3rem;">
+                                    <!-- <img src="./assets/img/brand/dark.svg" alt="Themesberg logo"> -->
+                                    <span>Dream</span><span style="font-weight: 100;">Pixel</span>
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <a href="#navbar_global" class="fas fa-times" data-toggle="collapse"
+                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                    title="close" aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                        <li><a class="nav-item" href="./index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <span class="nav-link-inner-text">Apps</span>
+                                <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="./lwc-studio.html">LWC Studio</a></li>
+                                <li><a class="dropdown-item" href="./salesforce-assistant.html">Salesforce Assistant</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./lwc-snippets.html">Salesforce LWC Short
+                                        Keys</a></li>
+                                <li><a class="dropdown-item" href="./lightning-grid-system.html">Salesforce Lightning
+                                        Grid
+                                        System</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-item" href="./extension-privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <!-- <a href="https://themesberg.com/product/ui-kits/neumorphism-ui-pro" target="_blank"
+                        class="btn btn-primary text-secondary mr-3"><i class="far fa-paper-plane mr-2"></i>HOME</a>
+                    <a href="https://themesberg.com/docs/neumorphism-ui/getting-started/quick-start/" target="_blank"
+                        class="btn btn-primary d-none d-md-inline-block"><i class="fas fa-book"></i> Docs v1.0</a> -->
+                    <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                        data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Hero -->
+        <section class="section section bg-soft pb-1 overflow-hidden z-2">
+            <div class="container z-2">
+                <div class="row justify-content-center text-center pt-6">
+                    <div class="col-lg-12 col-xl-12">
+                        <h1 class="display-2 mb-3">The <strong style="font-weight: bolder;">LWC</strong><span
+                                style="font-weight: 100 !important;"> STUDIO</span></h1>
+                        <p class="lead px-md-3 mb-3"><strong>Chrome extension for Lightning Web Components, Lightning
+                                Message Service and Apex Classes</strong></p>
+                        <p class="lead mb-3 text-justify">
+                            Salesforce made a great move by making the Web Components part of the eco system by
+                            introducing Lightning Web Component(LWC). But for some reason, they decided not to provide
+                            the ability to code it directly from their developer console. Currently the only way to do
+                            it is, is by using the VS Code & Code builder. This is great, but if you’re in a hurry and
+                            want to make some quick changes, it won’t be easy.
+                            <br>– Chrome Extension
+                        </p>
+                        <div class="d-flex flex-column flex-wrap flex-md-row justify-content-md-center mb-5">
+                            <a href="https://chrome.google.com/webstore/detail/salesforce-lwc-editor/ehkpneicmpbdejpoancidgkejlkahjgo"
+                                target="_blank" class="btn btn-primary mb-3 mb-lg-0 mr-3"><i
+                                    class="fas fa-cloud-download-alt mr-2"></i>
+                                Install Now</a>
+                            <!-- <div class="mt-2">
+                                <a class="github-button" href="https://github.com/themesberg/neumorphism-ui" data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themesberg/neumorphism-ui on GitHub">Star</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section bg-soft">
+            <div class="container">
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="mb-5">
+                            <small class="text-muted horizontal-line">FEATURES</small>
+                            <p class="display-3 full-bold">Easy to use LWC Studio<br>with modern development features
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6">
+                        <img src="/assets/images/hero-img.png" alt=""
+                            style="max-width: 85%;filter: grayscale(1);opacity: 0.7;">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="accordion shadow-soft rounded">
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-4" data-target="#panel-4" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-bolt"></span>Lightning Web Compnent (LWC)</span>
+
+                                </a>
+                                <!-- <div >
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            You can quickly create new component and update/delete exsting any LWC components.</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-5" data-target="#panel-5" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-exchange-alt"></span>Lightning Message Services</span>
+
+                                </a>
+                                <!-- <div >
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            You can quickly create new LMS and update exsting Lightning Message Services. </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-6" data-target="#panel-6" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-code"></span>Apex Classes</span>
+
+                                </a>
+                                <!-- <div >
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            You can quickly create new Apex classes and update exsting apex classes.</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-6" data-target="#panel-6" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-hdd"></span>Backup</span>
+
+                                </a>
+                                <!-- <div >
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            Backup feature available. </p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-6" data-target="#panel-6" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-keyboard"></span>Shortcut Keys</span>
+
+                                </a>
+                                <!-- <div >
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            In editor JavaScript, LWC, Apex shortcut Keys available.</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- <ul class="d-flex list-unstyled mb-5 mb-lg-0">
+                            <li class="mr-2">
+                                <a href="https://twitter.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="twitter social link"
+                                data-toggle="tooltip" data-placement="top" title="Follow @themesberg on Twitter">
+                                    <span aria-hidden="true" class="fab fa-chrome"></span>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://www.facebook.com/themesberg/" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="facebook social link"
+                                data-toggle="tooltip" data-placement="top" title="Like @themesberg on Facebook">
+                                    <span aria-hidden="true" class="fab fa-edge"></span>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://github.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="github social link"
+                                data-toggle="tooltip" data-placement="top" title="Open source projects">
+                                    <span aria-hidden="true" class="fab fa-salesforce"></span>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://github.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="github social link"
+                                data-toggle="tooltip" data-placement="top" title="Open source projects">
+                                    <span aria-hidden="true" class="fas fa-bolt"></span>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://github.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="github social link"
+                                data-toggle="tooltip" data-placement="top" title="Open source projects">
+                                    <span aria-hidden="true" class="fab fa-js"></span>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://github.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="github social link"
+                                data-toggle="tooltip" data-placement="top" title="Open source projects">
+                                    <span aria-hidden="true" class="fab fa-html5"></span>
+                                </a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="https://github.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="github social link"
+                                data-toggle="tooltip" data-placement="top" title="Open source projects">
+                                    <span aria-hidden="true" class="fab fa-css3"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dribbble.com/themesberg" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="dribbble social link"
+                                data-toggle="tooltip" data-placement="top" title="Follow us on Dribbble">
+                                    <span aria-hidden="true" class="fas fa-code"></span>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="section">
+            <div class="container">
+
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="mb-5">
+                            <small class="text-muted horizontal-line">ALL YOU NEED OUT OF THE BOX</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 ">
+                        <div class="accordion shadow-soft rounded">
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-4" data-target="#panel-4" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fab fa-leanpub"></span>Quick Implementation</span>
+                                </a>
+                                <div>
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            If you are a learner and student then this tool will be very useful for you
+                                            because without any configuration you can take quick action here.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-5" data-target="#panel-5" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-box-open"></span>Highly Protected Privacy</span>
+                                </a>
+                                <div>
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            Your privacy is highly protected. We are not sharing or storing your
+                                            credentials anywhere. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-sm card-body bg-primary border-light mb-0">
+                                <a href="#panel-6" data-target="#panel-6" class="accordion-panel-header"
+                                    data-toggle="collapse" role="button" aria-expanded="false" aria-controls="panel-1">
+                                    <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                            class="fas fa-donate"></span>Deal with multiple org's</span>
+                                </a>
+                                <div>
+                                    <div class="pt-3">
+                                        <p class="mb-0">
+                                            You can work with multiple salesforce organizations at the same time for
+                                            multitasking. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 ">
+                        <!-- <small>ALL YOU NEED OUT OF THE BOX</small> -->
+                        <p class="h3 full-bold">The LWC Studio will make your life as a Salesforce Lightning Developer a
+                            lot easier</p>
+                        <div>
+                            <ul class="feature-list" style="text-align: start !important;">
+                                <li>Quick 'Create New LWC Components' and 'Lightning Message Services'.</li>
+                                <li>Create/Update Apex Classes.</li>
+                                <li>Create a new file for a particular component.</li>
+                                <li>Download &amp; backup a component or specific file</li>
+                                <li>Find code in all LWC components.</li>
+                                <li>Change the name of a specific file of the component.</li>
+                                <li>Delete components or a specific file.</li>
+                                <li>Quick save(deploy) your change by using 'CTRL+S'.</li>
+                                <li>All LWC development snippets (shortcut keys) are available.</li>
+                                <li>And much more!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="mb-5">
+                            <small class="text-muted horizontal-line">OUR SETUP PROCESS</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 col-md-6">
+                        <div class="card bg-primary shadow-soft border-light mb-4">
+                            <div class="card-body text-center text-md-left" style="padding: 2rem !important;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h2 class="mb-3">1. Install</h2>
+                                        <p class="mb-4">
+                                            If you need any help with our products or services, choose one of the
+                                            following ways to contact us.
+                                        </p>
+                                        <div class="pb-3">
+                                            <a href="#" class="btn btn-primary">
+                                                <span class="mr-1">
+                                                    <span class="fas fa-headphones"></span>
+                                                </span>
+                                                Get install now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="card bg-primary shadow-soft border-light">
+                            <div class="card-body text-center text-md-left" style="padding: 2rem !important;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <h2 class="mb-3">2. Use the Salesforce org</h2>
+                                        <p class="mb-3">
+                                            After install, Just log in to salesforce org and click the "LWC Studio" icon
+                                            (browser top-right corner [chrome extension standard icon-bar]) when the
+                                            icon changes to blue color.
+                                        </p>
+                                        <div class="text-center">
+                                            <img src="/assets/images/lwc-studio/turn-blue-icon.gif" alt=""
+                                                style="border: 1px solid #ccc; border-radius: 10px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card bg-primary shadow-inset border-light">
+                            <div class="card-body">
+                                <video width="100%" controls="" autoplay="" loop="" muted="">
+                                    <source src="/assets/images/lwc-studio/video2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="mb-5">
+                            <small class="text-muted horizontal-line">FETURES</small>
+                            <p class="display-3 full-bold">A LWC Studio is Easy to Use!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Text | Right : Img -->
+                <div class="card bg-primary shadow-soft border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h3 class="text-center text-md-left">Document Formatting</h3>
+                                <p>LWC Studio has great support for source code formatting. The editor
+                                    has two explicit format actions:
+                                </p>
+                                <ul class="my-custom-ul">
+                                    <li>Format Document</li>
+                                    <li>Format Selection </li>
+                                </ul>
+                                You can invoke these from the Command Palette <kbd>fn</kbd>+<kbd>F1</kbd> or the editor
+                                context menu.
+                            </div>
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/document-format.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Img | Right : Text -->
+                <div class="card bg-primary shadow-inset border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/wordwrap.gif" alt="">
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h3 class="text-center text-md-left">Word Wrap</h3>
+                                <p>A word processing feature that automatically transfers a word for which there is
+                                    insufficient space from the end of one line of text to the beginning of the next
+                                </p>
+                                <p>You can toggle word wrap for the Editor session with this button.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Text | Right : Img -->
+                <div class="card bg-primary shadow-soft border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h3 class="text-center text-md-left">Command Palette</h3>
+                                <p>The Command Palette provides access to many commands. You can execute editor
+                                    commands, open files, search for symbols, and see a quick outline of a file, all
+                                    using the same interactive window. Here are a few tips: <kbd>fn</kbd>+<kbd>F1</kbd>
+                                    will let you navigate
+                                    to any file or symbol by typing its name.</p>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/command.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Img | Right : Text -->
+                <div class="card bg-primary shadow-inset border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/top-menus.gif" alt="">
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h3 class="text-center text-md-left">Additional features</h3>
+                                <p class="text-center text-md-left"><small>Additional features on top bar</small></p>
+                                <ul class="my-custom-ul">
+                                    <li><strong>Copy Session Id:</strong> A session Id is used to identify a user
+                                        using
+                                        salesforce UI or API tools, it has a time limit and can be manually expired
+                                        by the user logging out or by an admin removing that session in Setup. </li>
+                                    <li><strong>Download:</strong> Current open file is for download which helps to
+                                        backup your files without copy paste </li>
+                                    <li><strong>Save:</strong> The currently open file is to be saved in the database.
+                                        You
+                                        can also save with the help of the <kbd>CTRL</kbd>+<kbd>S</kbd> shortcut key
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Text | Right : Img -->
+                <div class="card bg-primary shadow-soft border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h3>Explore (Toggle files section)</h3>
+                                <p>The Explorer is used to browse, open, and manage all of the files in your org.<br>
+                                    After opening a files/folder in editor, the contents of the files/folder are shown
+                                    in the Explorer. You can do many things from here:</p>
+                                <ul>
+                                    <li>Create, delete, and rename files</li>
+                                    <li>Use the context menu to explore all options</li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/menu-toggle.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Img | Right : Text -->
+                <div class="card bg-primary shadow-inset border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/new-component.gif" alt="">
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h3 class="text-center text-md-left">Lightning Web Components</h3>
+                                <p>LWC (Lightning Web Components) has become a popular programming technique for
+                                    creating web components. It provides specialized services that build on existing
+                                    cutting-edge web technologies. In technology, a better user experience is the
+                                    essential criteria for pushing change and innovation.</p>
+                                <p>- Here you can easily create new Lightning Web Components.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Text | Right : Img -->
+                <div class="card bg-primary shadow-soft border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h3 class="text-center text-md-left">Lightning Message Service</h3>
+                                <p>Lightning Message Service (LMS) allow you to communicate between Visualforce and
+                                    Lightning Components (Aura and LWC both) on any Lightning page. LMS API allow you to
+                                    publish message throughout the lightning experience and subscribe the same message
+                                    anywhere with in lightning page.</p>
+                                <p>- Here you can easily create new Lightning Message Service.</p>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/lms.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Img | Right : Text -->
+                <div class="card bg-primary shadow-inset border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/apex-class.gif" alt="">
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h3 class="text-center text-md-left">Apex Classes</h3>
+                                <p>An Apex class is a template or blueprint from which Apex objects are created. Classes
+                                    consist of other classes, user-defined methods, variables, exception types, and
+                                    static initialization code.
+                                </p>
+                                <p>- Here you can easily create new Apex class.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Text | Right : Img -->
+                <div class="card bg-primary shadow-soft border-light px-4 py-1 mb-5">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h3 class="text-center text-md-left">Code Searcher</h3>
+                                <p>LWC Studio Code Searcher that allows you to find Lightning Web Components quicker
+                                    than normal.</p>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/search-component.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left: Img | Right : Text -->
+                <div class="card bg-primary shadow-inset border-light px-4 py-1">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="/assets/images/lwc-studio/additional-features.gif" alt="">
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <h3 class="text-center text-md-left">Additional Features</h3>
+                                <p>Additional Features included useful features like debugging database errors when the
+                                    component is deployed, editor theme and minimap.
+                                </p>
+                                <ul class="my-custom-ul">
+                                    <li>Debugging</li>
+                                    <li>Themes</li>
+                                    <li>Minimap</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="mb-5">
+                            <small class="text-muted horizontal-line">ALWAYS REMEMBER THESE THINGS</small>
+                            <p class="display-3 full-bold">Additional Notes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="rounded shadow-soft border border-light bg-soft p-4 ">
+                            <ul style="margin-bottom: 0rem !important;">
+                                <li>When you REFRESH the page will be lost your all modification so make
+                                    sure your all changes will be saved before a refresh.</li>
+                                <li>If your access token has expired, Please take backup the previously
+                                    modified files and close the editor and reopen.</li>
+
+                                <li>Do not modify and save the LWC in the Active/Production org.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Title -->
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="mb-5">
+                            <small class="text-muted horizontal-line">&#128528; &#128530; &#128533;</small>
+                            <p class="display-3 full-bold">Workaround</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="rounded shadow-inset border border-light bg-soft p-4 ">
+                            <ul style="margin-bottom: 0rem !important;">
+                                <li><strong>Exception Types:</strong> FIELD_INTEGRITY_EXCEPTION, CUSTOM_FIELD_NOT_FOUND
+                                    and
+                                    INVALID_REFERENCE_SOBJECT_FIELD</li>
+                                <li><strong>Summary:</strong> Unable to use @import with custom objects</li>
+                                <li><strong>Repro:</strong> Try to import a custom field from your custom object
+                                    <br><code>import CUSTOM_FIELD from '@salesforce/schema/Custom_Object__c.Custom_Field__c'</code>
+                                </li>
+                                <li><strong>Workaround:</strong> Deploy your LWC Component using <kbd>Standard
+                                        Deployment?</kbd> Salesforce Standard Deployment Model <kbd>(ChangeSet)</kbd>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="container">
+                <div class="card bg-primary shadow-soft border-light px-4 py-1 mb-6">
+                    <div class="card-body text-center text-md-left">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <small>SHARE | SUPPORT | REVIEW</small>
+                                <h2 class="mb-3">Thank you for your support to LWC STUDIO</h2>
+                                <p class="mb-4">
+                                    Need your support, Please review and share.
+                                </p>
+                                <a href="https://chrome.google.com/webstore/detail/salesforce-lwc-editor/ehkpneicmpbdejpoancidgkejlkahjgo"
+                                    target="_blank" class="btn btn-primary">
+                                    <span class="mr-1">
+                                        <span class="fas fa-download"></span>
+                                    </span>
+                                    Get started now
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 mt-4 mt-md-0 text-md-right">
+                                <img src="https://cdni.iconscout.com/illustration/premium/thumb/customer-review-3949821-3277282.png"
+                                    alt="illustration" style="width: 80%;filter: grayscale(1);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="border-top border-light pb-4 pt-md-4">
+            <div class="container">
+                <div class="row ">
+                    <div class="col">
+                        <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                            <p class="font-weight-normal mb-0" style="font-size: 1.3rem;"><span
+                                    style="font-weight: bold;">Dream</span><span style="font-weight: 100;">Pixel</span>
+                                ♥ <span class="current-year">2022</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <!-- Core -->
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./vendor/headroom.js/dist/headroom.min.js"></script>
+
+    <!-- Vendor JS -->
+    <script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <script src="./vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="./vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="./vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="./vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
+    <script src="./vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="./vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./vendor/prismjs/prism.js"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- Neumorphism JS -->
+    <script src="./assets/js/neumorphism.js"></script>
+</body>
+
+</html>
